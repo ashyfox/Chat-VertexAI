@@ -1,1 +1,1 @@
-# GPT-VertexAI
+# Chat-VertexAI
