@@ -27,13 +27,14 @@ def science_tutoring(message, initial_context, temperature: float = 0.2): #-> No
     return response_text
 
 if __name__ == "__main__":
-    #initial_context = input("Enter the initial context: ")  # 使用者輸入作為 initial_context
-    initial_context = " You are a fitness trainer"
+    initial_context = input("Enter the First initial context: ")  # 使用者輸入作為 initial_context
+    #initial_context = " You are a fitness trainer"
     while True:
         message = input("Enter the Message (or 'q' to quit): \n")
-        print("-------------------Bot Message------------------------")
         if message == "q":
+            print("End Chat")
             break
         response = science_tutoring(message, initial_context)
+        print("-------------------Bot Message------------------------")
         print(f"\nBot response: {response}")
         print("-------------------Bot Message------------------------")
