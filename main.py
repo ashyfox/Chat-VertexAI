@@ -8,7 +8,7 @@ def science_tutoring(message, initial_context, temperature: float = 0.2): #-> No
     # TODO developer - override these parameters as needed:
     parameters = {
         "temperature": temperature,  # Temperature controls the degree of randomness in token selection.
-        "max_output_tokens": 256,    # Token limit determines the maximum amount of text output.
+        "max_output_tokens": 1024,    # Token limit determines the maximum amount of text output. default = 256
         "top_p": 0.95,               # Tokens are selected from most probable to least until the sum of their probabilities equals the top_p value.
         "top_k": 40,                 # A top_k of 1 means the selected token is the most probable among all tokens.
     }
@@ -28,7 +28,6 @@ def science_tutoring(message, initial_context, temperature: float = 0.2): #-> No
 
 if __name__ == "__main__":
     initial_context = input("Enter the First initial context: ")  # 使用者輸入作為 initial_context
-    #initial_context = " You are a fitness trainer"
     while True:
         message = input("Enter the Message (or 'q' to quit): \n")
         if message == "q":
